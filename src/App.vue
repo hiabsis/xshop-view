@@ -2,17 +2,16 @@
   <div >
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <Home msg = "hello"/>
+    <h2>343</h2>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import Home from './components/Home.vue'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld,
     Home
   }
 }
