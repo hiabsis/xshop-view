@@ -1,14 +1,16 @@
 <template>
-  <div >
-<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <Home msg = "hello"/>
-    <h2>343</h2>
+  <div id="app">
+<!--    // http://localhost:8080 或者 http://localhost:8080/home就会在 <router-view> 中渲染 home.vue 组件-->
+<!--    <router-view></router-view>-->
+
+<!--    home.vue 是真正的父组件，first.vue、login.vue 等子组件都会渲染到 home.vue 中的-->
+    <!--    <ProductDetail msg = "hello"/>-->
+    <Home></Home>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
-
 export default {
   name: 'app',
   components: {

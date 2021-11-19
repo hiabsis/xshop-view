@@ -54,7 +54,7 @@
           <div class="grid-content bg-purple" v-for="(item,index)   in hotProductArr" :key="index">
             <el-col :span="6">
 
-              <div class="block">
+              <div class="block" @click="productDetail(item)">
                 <el-image    style="width: 90%; height: 80%" :src='ImageUrlPath(item,2)'></el-image><br/>
 
                 <span class="demonstration">${{item.product_price}}  </span>
@@ -128,6 +128,7 @@ export default {
         }
       })
     },
+    // 获取最新商品详情
     listNewestProductList() {
       this.$http.get('http://localhost/XShop/product/newest', {params: {page: 0, size: 4}}, {
         emulateJSON: true
@@ -181,7 +182,10 @@ export default {
         }
       })
     },
-
+    // // 获取商品详情
+    // productDetail(product){
+    //   console.log(product)
+    // },
     // 获取商品链接
     ImageUrlPath(productDetail ,type) {
       for (let i=0;i<productDetail.pictures.length;i++){
